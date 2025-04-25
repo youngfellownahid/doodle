@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AI Doodle App</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<center>
+		<h1 class="text-primary mt-3">AI Doodle App	<button type="button" id="show_sketch" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Show Sketch</button></h1>
+		<p class="text-secondary fw-bold">Object: <span id="obj" class="text-success"></span> </p>
+		<p class="text-secondary fw-bold">Accuracy: <span id="acc" class="text-success"></span> </p>
+		<button class="btn btn-danger" onclick="clearCanvas()">Clear Canvas</button>
+	</center>
+	<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Sketches</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        <img src="sketch1.png" class="img-fluid">
+	        <img src="sketch2.png" class="img-fluid">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script type="text/javascript" src="sketch.js"></script>
+</body>
+</html>
